@@ -233,7 +233,7 @@
   - 注意：InversePairsCore形参的顺序是(data,copy)，而递归调用时实参是(copy,data)。递归函数InversePairsCore的作用就行了，它是对data的左右半段进行合并，复制到辅助数组copy中有序。
 - 编程实现
 
-```
+```C++
     int InversePairs(vector<int> data) {
         if(data.size() == 0){
             return 0;
@@ -564,7 +564,7 @@ private:
   - 使用三个指针，分别指向当前遍历到的结点、它的前一个结点以及后一个结点。在遍历的时候指针交替移动和改变next指针的指向即可。
 - 编程实现
 
-```
+```C++
     ListNode* ReverseList(ListNode* pHead) {
         if(pHead == NULL)
             return NULL;
@@ -597,7 +597,7 @@ private:
   - 使用递归的方式，通过链表值的判断，依次递增构建新的链表节点指。
 - 编程实现
 
-```
+```c++
     ListNode* Merge(ListNode* pHead1, ListNode* pHead2)
     {
         if(pHead1 == NULL && pHead2 == NULL)
@@ -630,7 +630,7 @@ private:
   - 第三步：拆分链表。奇数是原链表，偶数是复制的链表。
 - 编程实现
 
-```
+```C++
     RandomListNode* Clone(RandomListNode* pHead)
     {
         if(pHead == NULL)
@@ -862,7 +862,7 @@ private:
   - 前序遍历序列中，第一个数字总是树的根结点的值。在中序遍历序列中，根结点的值在序列的中间，左子树的结点的值位于根结点的值的左边，而右子树的结点的值位于根结点的值的右边。可以递归来实现分别构建左右子树。
 - 编程实现
 
-```
+```C++
     TreeNode* reConstructBinaryTree(vector<int> pre,vector<int> vin) {
         if(pre.empty() || vin.empty())
             return nullptr;
@@ -912,7 +912,7 @@ private:
   - 第二步：判断树A以第一步节点为根节点的子树是否和树B有一样的结构，这里要注意如果树B为空但是树A不为空时，树B是树A的子结构，
 - 编程实现
 
-```
+```c++
     bool HasSubtree(TreeNode* pRoot1, TreeNode* pRoot2)
     {
         bool flag = false;
@@ -963,7 +963,7 @@ private:
   - 先交换根节点的两个子结点，然后递归交换左右子树
 - 编程实现
 
-```
+```c++
     void Mirror(TreeNode *pRoot) {
         if(pRoot == NULL)
             return;
@@ -989,7 +989,7 @@ private:
   - 每一次打印一个结点的时候，如果该结点有子结点，则把该结点的子结点放到一个队列的末尾。接下来到队列的头部取出最早进入队列的结点，重复前面的打印操作，直至队列中所有的结点都打印出来为止。
 - 编程实现
 
-```
+```c++
     vector<int> PrintFromTopToBottom(TreeNode* root) {
         vector<int> res;
         if(root == NULL)
@@ -1024,7 +1024,7 @@ private:
   - 需要注意的是，遍历左右子树的时候，全局变量tmp是不清空的，直到到了根结点才请空tmp。
 - 编程实现
 
-```
+```c++
 class Solution {
 private:
     vector<vector<int> > res;
