@@ -1939,7 +1939,7 @@ public:
   - 弹出：当stack2中不为空时，在stack2中的栈顶元素是最先进入队列的元素，可以弹出。如果stack2为空时，我们把stack1中的元素逐个弹出并压入stack2。由于先进入队列的元素被压倒stack1的栈底，经过弹出和压入之后就处于stack2的栈顶，可以直接弹出。即可实现队列的先进先出。
 - 编程实现
 
-```
+```c++
 class Solution
 {
 public:
@@ -1979,7 +1979,7 @@ private:
   - 入栈时，数据栈保存所有数据，最小栈每次都入栈最小元素。
 - 编程实现
 
-```
+```C++
 class Solution {
 public:
     void push(int value) {
@@ -2356,7 +2356,7 @@ private:
   - 或者自己实现
 - 编程实现
 
-```
+```C++
     vector<int> GetLeastNumbers_Solution(vector<int> input, int k) {
         vector<int> res;
         if(input.size() <= 0 || k <=0 || input.size() < k)
@@ -2396,7 +2396,7 @@ private:
   - 之所以补8，是因为当百位为0，则a/10==(a+8)/10，当百位>=2，补8会产生进位位，效果等同于(a/10+1)
 - 编程实现
 
-```
+```C++
     int NumberOf1Between1AndN_Solution(int n)
     {
         // 统计次数
