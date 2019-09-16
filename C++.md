@@ -630,8 +630,8 @@ int (*p[10])(int)//指向函数的指针数组
 - malloc仅仅分配内存空间，free仅仅回收空间，不具备调用构造函数和析构函数功能，用malloc分配空间存储类的对象存在风险；new和delete除了分配回收功能外，还会调用构造函数和析构函数。
 - malloc和free返回的是void类型指针（必须进行类型转换），new和delete返回的是具体类型指针。
 - 使用new操作符申请内存分配时无须指定内存块的大小，编译器会根据类型信息自行计算。而malloc则需要显式地指出所需内存的尺寸。
-- new：调用operator new函数申请空间(operator new 实际是通过malloc来申请空间的)；在申请的空间上执行构造函数，完成对象的构造；
-- delete：在空间上执行析构函数，完成对象中资源的清理工作；调用operator delete函数释放对象的空间(operator delete实际是通过free来释放空间的；)；
+- new：调用operator new函数申    请空间(operator new 实际是通过malloc来申请空间的)；在申请的空间上执行构造函数，完成对象的构造；
+- delete：在空间上执行析构函数，完成对象中资源的清理工作；调用operator delete函数释放对象的空间(operator delete实际是通过free来释放空间的)；
 - delete只会调用一次析构函数。delete[]会调用数组中每个元素的析构函数。
 
 
